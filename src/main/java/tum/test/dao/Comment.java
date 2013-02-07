@@ -5,6 +5,7 @@ import org.springframework.data.domain.Persistable;
 import java.util.Date;
 
 /**
+
  *
  */
 public class Comment implements Persistable<Integer> {
@@ -13,6 +14,18 @@ public class Comment implements Persistable<Integer> {
     private String userName;
     private String contents;
     private Date createdTime;
+
+    public Comment(Integer id, String userName, String contents, Date createdTime) {
+        this.id = id;
+        this.userName = userName;
+        this.contents = contents;
+        this.createdTime = createdTime;
+    }
+
+    public Comment() {
+
+    }
+
 
     @Override
     public Integer getId() {
